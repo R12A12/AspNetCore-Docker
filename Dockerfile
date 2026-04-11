@@ -1,4 +1,4 @@
-FROM microsoft.com/dotnet/sdk:10.0.5 AS build
+FROM ://microsoft.com As build
 WORKDIR /App
 
 # Copy everything
@@ -9,7 +9,7 @@ RUN dotnet restore
 RUN dotnet publish -o out
 
 # Build runtime image
-FROM microsoft.com/dotnet/aspnet:10.0.5
+FROM ://microsoft.com
 WORKDIR /App
 COPY --from=build /App/out .
 ENTRYPOINT ["dotnet", "DotNet.Docker.dll"]
