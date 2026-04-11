@@ -1,4 +1,4 @@
-FROM microsoft/aspnetcore-build:2.0.0 AS build
+FROM microsoft/aspnetcore-build:10.0.3 AS build
 WORKDIR /code
 COPY . .
 RUN dotnet restore
