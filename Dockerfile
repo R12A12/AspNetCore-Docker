@@ -1,10 +1,10 @@
-FROM microsoft/aspnetcore-build:10.0.3 AS build
+FROM mcr.microsoft.com/dotnet/aspnet
 WORKDIR /code
 COPY . .
 RUN dotnet restore
 RUN dotnet publish --output /output --configuration Release
 
-FROM microsoft/aspnetcore:10.0.3
+FROM mcr.microsoft.com/dotnet/aspnet
 COPY --from=build /output /app
 WORKDIR /app
 ENTRYPOINT ["dotnet", "AspNetCoreOnDocker.dll"]
