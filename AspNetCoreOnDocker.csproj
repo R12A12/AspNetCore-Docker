@@ -2,7 +2,4 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp10.0</TargetFramework>
   </PropertyGroup>
-  <ItemGroup>
-    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="10.0.3" />
-  </ItemGroup>
 </Project>
